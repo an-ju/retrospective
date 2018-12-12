@@ -14,6 +14,9 @@ import App from '../app.vue'
 
 Vue.use(TurbolinksAdapter)
 
+import WrongFeature from '../waste_types/wrong_feature'
+Vue.component('wrong_feature', WrongFeature)
+
 document.addEventListener('turbolinks:load', () => {
     let app = new Vue({
         el: '[data-behavior="vue"]',
