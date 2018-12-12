@@ -8,16 +8,21 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import '../css/application.css'
-import TurbolinksAdapter from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm'
-import App from '../app.vue'
+import TurbolinksAdapter from 'vue-turbolinks'
+import VueResource from 'vue-resource'
 
 Vue.use(TurbolinksAdapter)
+Vue.use(VueResource)
 
+import Waste from '../waste'
+Vue.component('waste', Waste)
 import WrongFeature from '../waste_types/wrong_feature'
 Vue.component('wrong_feature', WrongFeature)
 
 document.addEventListener('turbolinks:load', () => {
+    Vue.http.headers.common['X-CSRF-Token'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+
     let app = new Vue({
         el: '[data-behavior="vue"]',
     })
