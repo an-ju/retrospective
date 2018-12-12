@@ -12,10 +12,10 @@
                 </div>
             </div>
             <div class="md:flex mb-6">
-                <label class="block text-grey-darkest pr-4" for="rating">
+                <label class="block text-grey-darkest pr-4" :for="waste_type + '-rating'">
                     Please give an estimation about the seriousness of this waste:
                 </label>
-                <input class="border-2 border-grey-dark rounded text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-purple" type="number" id="rating" min="0" max="5" v-model="rating"/>
+                <input class="border-2 border-grey-dark rounded text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-purple" type="number" :id="waste_type + '-rating'" min="0" max="5" v-model="rating"/>
             </div>
             <div class="md:flex mb-10">
                 <div class="md:w-full">
@@ -59,7 +59,6 @@
                 }
             },
             handleSubmit: function () {
-                console.log('submit')
                 // Create a new team
                 if (this.id == null) {
                     let post_data = {
