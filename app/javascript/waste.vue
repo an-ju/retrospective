@@ -49,7 +49,7 @@
         },
         methods: {
             checkbox_id: function (index) {
-                return 'checkbox[' + index + ']'
+                return this.waste_type + '-checkbox[' + index + ']'
             },
             label_display: function (index) {
                 if (this.checked[index]) {

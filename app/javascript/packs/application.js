@@ -19,6 +19,8 @@ import Waste from '../waste'
 Vue.component('waste', Waste)
 import WrongFeature from '../waste_types/wrong_feature'
 Vue.component('wrong_feature', WrongFeature)
+import MismanageBacklog from '../waste_types/mismanage_backlog'
+Vue.component('mismanage_backlog', MismanageBacklog)
 
 document.addEventListener('turbolinks:load', () => {
     Vue.http.headers.common['X-CSRF-Token'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
