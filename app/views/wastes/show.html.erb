@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @waste.waste_type %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @waste.content %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @waste.rating %>
+</p>
+
+<%= link_to 'Edit', edit_waste_path(@waste) %> |
+<%= link_to 'Back', wastes_path %>
