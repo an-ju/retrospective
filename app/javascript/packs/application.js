@@ -21,6 +21,18 @@ import WrongFeature from '../waste_types/wrong_feature'
 Vue.component('wrong_feature', WrongFeature)
 import MismanageBacklog from '../waste_types/mismanage_backlog'
 Vue.component('mismanage_backlog', MismanageBacklog)
+import Rework from '../waste_types/rework'
+Vue.component('rework', Rework)
+import ComplexSolution from '../waste_types/complex_solution'
+Vue.component('complex_solution', ComplexSolution)
+import CognitiveLoad from '../waste_types/cognitive_load'
+Vue.component('cognitive_load', CognitiveLoad)
+import PsychologicalDistress from '../waste_types/psychological_distress'
+Vue.component('psychological_distress', PsychologicalDistress)
+import WaitingWaste from '../waste_types/waiting'
+Vue.component('waiting', WaitingWaste)
+import IneffectiveCommunication from '../waste_types/ineffective_communication'
+Vue.component('ineffective_communication', IneffectiveCommunication)
 
 document.addEventListener('turbolinks:load', () => {
     Vue.http.headers.common['X-CSRF-Token'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content')

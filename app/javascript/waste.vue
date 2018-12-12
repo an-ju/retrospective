@@ -13,7 +13,7 @@
             </div>
             <div class="md:flex mb-6">
                 <label class="block text-grey-darkest pr-4" :for="waste_type + '-rating'">
-                    Please give an estimation about the seriousness of this waste:
+                    Please give an estimation about the seriousness of this waste (0-5):
                 </label>
                 <input class="border-2 border-grey-dark rounded text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-purple" type="number" :id="waste_type + '-rating'" min="0" max="5" v-model="rating"/>
             </div>
