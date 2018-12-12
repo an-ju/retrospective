@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_11_235926) do
+ActiveRecord::Schema.define(version: 2018_12_12_002045) do
 
   create_table "wastes", force: :cascade do |t|
-    t.string "type"
+    t.string "waste_type"
     t.text "content"
     t.integer "rating"
     t.datetime "created_at", null: false

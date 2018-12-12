@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Wastes</h1>
+<h1 class="text-indigo">Wastes</h1>
 
 <table>
   <thead>
@@ -15,7 +15,7 @@
   <tbody>
     <% @wastes.each do |waste| %>
       <tr>
-        <td><%= waste.type %></td>
+        <td><%= waste.waste_type %></td>
         <td><%= waste.content %></td>
         <td><%= waste.rating %></td>
         <td><%= link_to 'Show', waste %></td>

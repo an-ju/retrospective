@@ -4,12 +4,12 @@ RSpec.describe "wastes/index", type: :view do
   before(:each) do
     assign(:wastes, [
       Waste.create!(
-        :type => "Type",
+        :waste_type => "Type",
         :content => "MyText",
         :rating => 2
       ),
       Waste.create!(
-        :type => "Type",
+        :waste_type => "Type",
         :content => "MyText",
         :rating => 2
       )

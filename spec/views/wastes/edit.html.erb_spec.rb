@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "wastes/edit", type: :view do
   before(:each) do
     @waste = assign(:waste, Waste.create!(
-      :type => "",
+      :waste_type => "",
       :content => "MyText",
       :rating => 1
     ))
@@ -14,7 +14,7 @@ RSpec.describe "wastes/edit", type: :view do
 
     assert_select "form[action=?][method=?]", waste_path(@waste), "post" do
 
-      assert_select "input[name=?]", "waste[type]"
+      assert_select "input[name=?]", "waste[waste_type]"
 
       assert_select "textarea[name=?]", "waste[content]"
 

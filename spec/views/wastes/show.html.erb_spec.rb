@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "wastes/show", type: :view do
   before(:each) do
     @waste = assign(:waste, Waste.create!(
-      :type => "Type",
+      :waste_type => "Type",
       :content => "MyText",
       :rating => 2
     ))
