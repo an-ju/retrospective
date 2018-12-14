@@ -1,0 +1,5 @@
+<h1>Reflect</h1>
+<h2><%= @waste_type %></h2>
+<%- issues(@wastes).each do |issue, num_issues| %>
+  <p><%= issue %>: <%= num_issues %></p>
+<% end %>

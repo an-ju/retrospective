@@ -4,7 +4,7 @@ class WastesController < ApplicationController
   # GET /wastes
   # GET /wastes.json
   def index
-    @wastes = Waste.all
+    @wastes = Waste.all.group_by(&:waste_type)
   end
 
   # GET /wastes/1
@@ -19,6 +19,12 @@ class WastesController < ApplicationController
 
   # GET /wastes/1/edit
   def edit
+  end
+
+  # GET /wastes/:waste_type/reflect
+  def reflect
+    @waste_type = params[:waste_type]
+    @wastes = Waste.where(waste_type: @waste_type)
   end
 
   # POST /wastes
@@ -62,13 +68,15 @@ class WastesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_waste
-      @waste = Waste.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def waste_params
-      params.require(:waste).permit(:waste_type, :content, :rating)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_waste
+    @waste = Waste.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def waste_params
+    params.require(:waste).permit(:waste_type, :content, :rating)
+  end
+
 end
