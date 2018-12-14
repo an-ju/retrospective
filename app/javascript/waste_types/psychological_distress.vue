@@ -16,9 +16,9 @@
         data() {
             return {
                 items: [
-                    'Other courses slows down the progress of our team.',
-                    'We have some issues with team communication/collaboration.',
-                    'We rush out most of the features at the last minute in this iteration.'
+                    'Other coursework slowed down our progress.',
+                    'We had/are having some problems with team communication/collaboration.',
+                    'We rushed out most of the features at the last minute in this iteration.'
                 ]
             }
         }

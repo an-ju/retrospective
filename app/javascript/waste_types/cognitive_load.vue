@@ -18,7 +18,7 @@
                 items: [
                     'There are stories that are too complex to design a simple solution for.',
                     'We spend a long time searching for the right library/tool/framework for a feature.',
-                    'We spend a long time understanding the contexts.',
+                    'We spend a long time understanding the contexts when working on a story.',
                     'The codebase is poorly organized and costs us a long time to develop new features.'
                 ]
             }

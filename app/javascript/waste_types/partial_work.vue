@@ -17,7 +17,7 @@
         data() {
             return {
                 items: [
-                    'We each works on several tasks in parallel in the iteration.',
+                    'Multitasking is common in our team.',
                     'We have some partially done work that becomes obsolete',
                     'We are working on features that we do not know if it will eventually work'
                 ]

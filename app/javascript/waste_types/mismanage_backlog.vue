@@ -16,9 +16,9 @@
         data() {
             return {
                 items: [
-                    'Implemented a low-priority story first.',
-                    'Added a new story into the backlog.',
-                    'Blocked by an urgent bug fix.'
+                    'We implemented a low-priority story first.',
+                    'We moved into the backlog a story that we did not plan for the iteration initially.',
+                    'We have some features/bug fixes that are important but ignored.'
                 ]
             }
         }

@@ -16,8 +16,9 @@
         data() {
             return {
                 items: [
-                    'Implemented a feature that does not have an instant business value for the customer.',
-                    'Implemented an interaction that the customer did not recognize.'
+                    'We implemented a feature that did not have an instant business value to the customer.',
+                    'We implemented an interaction that the customer did not recognize.',
+                    'We ignored some feedback from our last customer meeting.'
                 ],
             }
         }

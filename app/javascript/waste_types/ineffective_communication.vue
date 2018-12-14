@@ -16,9 +16,9 @@
         data() {
             return {
                 items: [
-                    'We have communication problems in our team.',
-                    'We have communication problems with the teaching staff.',
-                    'We have communication problems with our customer.'
+                    'We had/are having communication problems in our team.',
+                    'We had/are having communication problems with the teaching staff.',
+                    'We had/are having communication problems with our customer.'
                 ]
             }
         }

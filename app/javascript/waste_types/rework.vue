@@ -16,8 +16,9 @@
         data() {
             return {
                 items: [
-                    'There are some reworks happened in the iteration',
+                    'We had to redo some part of a feature because it was badly designed/implemented.',
                     'We have features that require a serious refactoring.',
+                    'We had to refactor an old feature to make it compatible with a new feature.'
                 ]
             }
         }

@@ -16,9 +16,9 @@
         data() {
             return {
                 items: [
-                    'There are user stories that take an unnecessarily long time to finish.',
-                    'We spend an unnecessarily long time in designing the architecture for a feature.',
-                    'We have features/designs that do not instantly add values to customers.'
+                    'There were user stories that took an unnecessarily long time to finish.',
+                    'We spent an unnecessarily long time in designing the architecture for a feature.',
+                    'We had features/designs that did not instantly add values to customers.'
                 ]
             }
         }
