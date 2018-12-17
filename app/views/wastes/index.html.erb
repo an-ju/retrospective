@@ -2,8 +2,8 @@
 
 <h1 class="text-indigo">Wastes</h1>
 
-<%- @wastes.sort_by { |k, v| seriousness(v) }.each do |waste_type, items| %>
-  <p><%= link_to waste_type, reflect_wastes_path(waste_type) %></p>
+<%- @wastes.sort_by { |k, v| -seriousness(v) }.each do |waste_type, items| %>
+  <%= render 'waste_item', waste_type: waste_type, items: items %>
 <% end %>
 
 <br>

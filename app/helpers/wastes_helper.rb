@@ -8,4 +8,9 @@ module WastesHelper
   def issues(wastes)
     wastes.flat_map(&:issues).inject(Hash.new(0)) { |h, issue| h[issue] += 1; h }
   end
+
+  # get the sum of ratings
+  def rating_sum(wastes)
+    wastes.inject(0) { |sum, v| sum + v.rating }
+  end
 end
