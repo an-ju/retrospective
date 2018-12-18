@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_12_002045) do
+ActiveRecord::Schema.define(version: 2018_12_18_190219) do
+
+  create_table "action_items", force: :cascade do |t|
+    t.string "name"
+    t.text "content"
+    t.integer "state"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "wastes", force: :cascade do |t|
     t.string "waste_type"
