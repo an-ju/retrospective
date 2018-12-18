@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :action_items
   resources :wastes do
     collection do
       get ':waste_type/reflect', to: 'wastes#reflect', as: 'reflect'
