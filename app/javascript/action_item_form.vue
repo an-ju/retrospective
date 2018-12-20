@@ -1,11 +1,18 @@
 <template>
     <div class="flex-col max-w-lg">
         <div class="w-full">
-            <div v-for="item in action_items" class="border-2 border-grey-light mx-1 w-full">
+            <div v-for="(item, index) in action_items" class="border-2 mx-1 w-full border-grey-light">
                 <p class="text-grey-dark my-2">{{ item.name }}</p>
+                <form class="hover:border-purple-light w-full" @submit.prevent="update_item(index)">
+                    <label :for="item.id + '_content'">
+                        Acceptance criteria
+                    </label>
+                    <input :class="item_status(item)" class="w-full px-2 py-3 border-2 rounded text-grey-darker focus:outline-none focus:bg-white focus:border-purple" type="text" :name="item.id + '_content'" v-model="item.content"/>
+                    <button class="shadow bg-purple hover:bg-purple-light focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Confirm</button>
+                </form>
             </div>
         </div>
-        <form class="hover:border-purple-light w-full border-2 border-grey-light mx-1" @submit.prevent="submit_form">
+        <form class="w-full border-2 border-grey-light mx-1" @submit.prevent="submit_form">
             <div class="items-center text-lg mb-3 mx-3">
                 <label class="block text-grey-dark pr-4 py-3" for="name">
                     New action item:
@@ -39,6 +46,22 @@
                 }, response => {
                     console.log(response)
                 })
+            },
+            update_item(item_index) {
+                let item = this.action_items[item_index]
+                this.$http.put('/action_items/' + item.id, { action_item: { content: item.content }}).then(response => {
+                    console.log(response)
+                }, response => {
+                    console.log(response)
+                })
+            },
+            item_status(item) {
+                if (item.content && item.content.length > 0) {
+                    return 'border-grey-light'
+                } else {
+                    return 'border-red-light'
+                }
+
             }
         }
     }
