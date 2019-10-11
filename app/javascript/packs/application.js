@@ -35,6 +35,8 @@ import IneffectiveCommunication from '../waste_types/ineffective_communication'
 Vue.component('ineffective_communication', IneffectiveCommunication)
 import ActionItemForm from '../action_item_form'
 Vue.component('action_item_form', ActionItemForm)
+import ActionItem from '../action_item'
+Vue.component('action_item', ActionItem)
 
 document.addEventListener('turbolinks:load', () => {
     Vue.http.headers.common['X-CSRF-Token'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
